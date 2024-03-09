@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option go_package = "github.com/healeycodes/compress-cs2-demo/optimal";
+
+message Player {
+  uint64 id = 1;
+  uint8 id_short = 2;
+  string name = 3;
+}
+
+message PlayerMeta {
+  map<uint64, Player> players = 1;
+}
+
+message EquipmentMeta {
+  map<string, int8> equipment = 1;
+}
+
+message Vector {
+  double x = 1;
+  double y = 2;
+  double z = 3;
+}
+
+message EquipmentList {
+  repeated int8 equipment = 1;
+}
+
+message Frame {
+  repeated uint8 player_spawn = 1;
+  repeated uint8 player_death = 2;
+  map<uint8, Vector> position_change = 3;
+  map<uint8, EquipmentList> equipment_change = 4;
+}
+
+message Game {
+  PlayerMeta player_meta = 1;
+  EquipmentMeta equipment_meta = 2;
+  repeated Frame frames = 3;
+}
