@@ -3,7 +3,7 @@
 
 <br>
 
-A practical example of how to compress a CS2 demo.
+A quick practical example of how to compress a CS2 demo.
 
 Download the `pera-vs-system5-m1-vertigo.dem` demo from https://www.hltv.org/matches/2370182/pera-vs-system5-esl-challenger-league-season-47-europe and store it at the root.
 
